@@ -1,0 +1,11 @@
+<form action="" class="form-group">
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.error_notification %>
+
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category, collection: Restaurant::CATEGORIES %>
+
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</form>
